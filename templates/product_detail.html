@@ -18,6 +18,8 @@
 <form action="{{ url_for('add_to_cart') }}" method="post">
 <input type="hidden" name="product_id" value="{{ product.id }}">
 
+<!-- product id is hidden, but is passed when the user submits the form -->
+<!-- form allows the user to enter the quantity of socks and the custom text -->
 <div class="mb-3">
 <label for="quantity" class="form-label">Quantity:</label>
 <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" max="10">
@@ -28,6 +30,9 @@
 <input type="text" class="form-control" id="custom_text" name="custom_text" placeholder="Enter text for your custom socks">
 </div>
 
+<!-- after entering the quantity and text, this is the submit button: -->
+<!-- adds the product to the cart -->
+<!-- user is then redirected back to the homepage or products page after adding the product to the cart -->
 <button type="submit" class="btn btn-success">
 <i class="bi bi-cart-plus"></i> Add to Cart
 </button>
