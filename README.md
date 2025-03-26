@@ -9,5 +9,7 @@ pip install flask pytest
 #then run main:
 python app.py and see if the site opens
 
-To run a test: 
+#To run a test in VS Terminal:
+source venv/bin/activate
+pytest -v
 
