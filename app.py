@@ -106,6 +106,11 @@ def add_to_cart():
     
     return redirect(url_for('cart'))
 
+#Route for the cart page
+#The cart() function sets up the cart page, and gets the cart with 
+#the items for the current session (browswer session), depends on them
+#being on the site. 
+#Also gets the total cost
 @app.route('/cart')
 def cart():
     cart = session.get('cart', [])

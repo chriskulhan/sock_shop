@@ -1,0 +1,67 @@
+
+<!-- #serves as a template for ALL the pages: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sock Wizard - Custom Socks Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Dr. Mary added this so it looks nicer: -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS (if needed) -->
+    <style>
+        /* Add any custom styles here */
+        .card {
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Body element holds all of the content for the base page -->
+     <!-- Set up the navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Sock Wizard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <!-- shows a picture of a house when the navbar is collapsed: -->
+                        <a class="nav-link" href="/"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <!-- shows a shopping cart when the navbar is collapsed: -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart"><i class="bi bi-cart"></i> Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4">
+        {% block content %}{% endblock %}
+    </div>
+    <!-- footer is applied to all the pages, like the navbar -->
+    <footer class="bg-light py-3 mt-5">
+        <div class="container text-center">
+            <p class="text-muted mb-0">© 2025 Sock Wizard - A Flask Demo Project</p>
+        </div>
+    </footer>
+    <!-- this is included in case it's needed for rollovers on the navbar -->
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
