@@ -3,7 +3,7 @@
 #Import the functions methods that I want to test:
 from app import get_available_products, get_product_by_id, get_all_categories
 
-#Test the get available products function
+# Test the get available products function
 def test_get_available_products():
     #verify that we can retrieve products
     #call the get_available_products function
@@ -11,7 +11,7 @@ def test_get_available_products():
 
     #Test using an assertion if three products are returned
     assert len(products) == 3
-    #Test that the products have all of the required fields (price, description, category, etc.)
+    # Test that the products have all of the required fields (price, description, category, etc.)
     assert all('id' in p and 'name' in p and 'description' in p and 
                'base_price' in p and 'image' in p and 'category' in products
                for p in products)
@@ -19,7 +19,7 @@ def test_get_available_products():
     #more or less than 2, the test will fail
     assert len(get_available_products('funny')) == 2
 
-#test the get product by ID function
+""#test the get product by ID function
 def test_get_products_by_id():
     #Get a product from teh collection of products with product id 1
     product = get_product_by_id(1)
@@ -41,5 +41,3 @@ def test_get_all_categories():
 
     #test that the two categories are "funny" and "school"
     assert 'funny' in categories and 'school' in categories
-
-    
