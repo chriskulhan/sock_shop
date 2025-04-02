@@ -45,6 +45,29 @@ def test_get_available_products():
 
 ""#test the get product by ID function
 def test_get_products_by_id():
+    #Dr. Mary's notes from the assignment:
+
+    """
+
+    This test checks our product lookup functionality:
+
+    - Verifies we can retrieve a product using its ID
+
+    - Confirms the product data is correct
+
+    - Tests that invalid IDs return None instead of causing errors
+
+    
+
+    If this test fails, it could mean:
+
+    - The product with ID 1 is missing or has incorrect data
+
+    - The function isn't handling invalid IDs properly
+
+    """
+
+    #my notes from class:
     #Get a product from teh collection of products with product id 1
     product = get_product_by_id(1)
 
@@ -56,6 +79,27 @@ def test_get_products_by_id():
 
 #test the get all categories function
 def test_get_all_categories():
+    #Dr. Mary's notes from the assignment:
+
+    """
+
+    This test examines our category management:
+
+    - Checks that we have the expected number of categories (2)
+
+    - Verifies that all expected categories exist ('funny' and 'school')
+
+    
+
+    If this test fails, it could mean:
+
+    - Categories are missing from the database
+
+    - The category retrieval logic is broken
+
+    """
+    
+    #my notes from class:
     #check that we have the correct number of categories of socks
     #check that 'funny' and 'school' are in the list of categories
     categories = get_all_categories()
