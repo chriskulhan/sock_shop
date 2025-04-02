@@ -16,3 +16,4 @@ ctrl-c (even on a mac)
 source venv/bin/activate
 pytest -v
 
+typing to get submit changes to appear
