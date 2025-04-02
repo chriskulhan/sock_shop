@@ -5,6 +5,30 @@ from app import get_available_products, get_product_by_id, get_all_categories
 
 # Test the get available products function
 def test_get_available_products():
+    #Dr. Mary's notes from the assignment:
+
+    """
+
+    This test verifies our product retrieval functionality:
+
+    - Checks that we have the correct number of products (3)
+
+    - Ensures each product contains all required data fields
+
+    - Tests that category filtering works correctly (2 'funny' products)
+
+    
+
+    If this test fails, it could mean:
+
+    - Products are missing from the database
+
+    - Products are missing required fields
+
+    - The category filtering logic is broken
+
+    """
+    #my notes from class:
     #verify that we can retrieve products
     #call the get_available_products function
     products = get_available_products()
@@ -13,7 +37,7 @@ def test_get_available_products():
     assert len(products) == 3
     # Test that the products have all of the required fields (price, description, category, etc.)
     assert all('id' in p and 'name' in p and 'description' in p and 
-               'base_price' in p and 'image' in p and 'category' in products
+               'base_price' in p and 'image' in p and 'category' in p
                for p in products)
     #test that the number of products in the "funny" category is 2
     #more or less than 2, the test will fail
