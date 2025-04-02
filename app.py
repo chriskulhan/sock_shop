@@ -117,12 +117,10 @@ def cart():
     total = sum(item['total'] for item in cart)
     return render_template('cart.html', cart=cart, total=total)
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+
 
 #added for part 2 of the assignment: 
 @app.route('/checkout')
-
 def checkout():
 
     cart = session.get('cart', [])
@@ -161,3 +159,5 @@ def complete_order():
 
     return render_template('thank_you.html', name=name, email=email)
 
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
