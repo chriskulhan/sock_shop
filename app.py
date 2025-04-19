@@ -117,8 +117,6 @@ def cart():
     total = sum(item['total'] for item in cart)
     return render_template('cart.html', cart=cart, total=total)
 
-
-
 #added for part 2 of the assignment: 
 @app.route('/checkout')
 def checkout():
